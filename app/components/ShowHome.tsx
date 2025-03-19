@@ -8,6 +8,7 @@ import LeetCodeIcon from "./leetcode.svg"; // Correctly import the SVG
 import CodeChefIcon from "./codechef.svg"; // Assuming you have a codechef.svg file
 import CodeforcesIcon from "./code-forces.svg"; // Assuming you have a codeforces.svg file
 import TLEicon from "./tle.jpg";
+import ghcat from "./securitocat.png"
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 import {
   Card,
@@ -312,44 +313,52 @@ const ShowHome = () => {
         </div>
       </section>
       <section className="min-h-screen flex items-center justify-center w-full">
-        <div className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <WobbleCard>
-              <div className="relative h-64 rounded-lg">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Contribute Now</CardTitle>
-                    <CardDescription>
-                      Open Source is for Everyone
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center justify-center h-full">
-                      <img
-                        src="https://github.githubassets.com/images/modules/logos_page/Octocat.png"
-                        alt="GitHub Octocat"
-                        className="w-32 h-32"
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </WobbleCard>
-
-            {/* Text Content */}
-            <div className="text-center md:text-left">
-              <h2 className="text-4xl font-bold mb-4">
-                Open Source Contribution
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
-                Feel free to contribute and enhance this platform! Your
-                creativity and skills can help improve the experience for
-                everyone.
-              </p>
-            </div>
+  <div className="container mx-auto px-4 py-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <a
+        href="https://github.com/mayur1377/kode-karo"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <WobbleCard>
+          <div className="relative h-64 rounded-lg">
+            <Card>
+              <CardHeader>
+                <CardTitle>Contribute Now</CardTitle>
+                <CardDescription>
+                  Open Source is for Everyone
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-center h-full">
+                <Image
+                  src={ghcat}
+                  alt="GitHub Octocat"
+                  className="w-32 h-32"
+                />
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </div>
-      </section>
+        </WobbleCard>
+      </a>
+
+      {/* Text Content */}
+      <div className="text-center md:text-left">
+        <h2 className="text-4xl font-bold mb-4">
+          Open Source Contribution
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300 mb-4">
+          Feel free to contribute and enhance this platform! Your
+          creativity and skills can help improve the experience for
+          everyone.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };

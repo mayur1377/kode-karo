@@ -36,7 +36,7 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from "@/components/ui/dialog";
+} from "@/app/components/ui/dialog";
 import { Label } from "@/app/components/ui/label";
 
 interface RatingData {

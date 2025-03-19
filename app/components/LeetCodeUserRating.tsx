@@ -33,7 +33,7 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from "@/components/ui/dialog";
+} from "../components/ui/dialog";
 import { Label } from "../components/ui/label";
 
 interface ContestData {

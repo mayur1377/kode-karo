@@ -14,7 +14,7 @@ import {
   Tooltip,
 } from "recharts";
 import { motion, AnimatePresence } from "framer-motion";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "../components/ui/skeleton";
 import { useYouTubeData } from "./YouTubeDataProvider";
 import { createClient } from "@supabase/supabase-js";
 import { SiCodeforces } from "react-icons/si";
@@ -35,7 +35,7 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from "@/components/ui/dialog"; // Import Dialog components
+} from "../components/ui/dialog"; // Import Dialog components
 import { Label } from "../components/ui/label"; // Import Label component
 
 interface ContestData {

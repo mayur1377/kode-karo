@@ -46,7 +46,7 @@ export function SiteFooter() {
         {/* Footer Bottom */}
         <div className="mt-12 border-t pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            Built by{" "}
+            Built with {" "}
             <a
               href="https://shadcn.com"
               target="_blank"
@@ -54,10 +54,20 @@ export function SiteFooter() {
               className="font-medium underline underline-offset-4"
             >
               shadcn
-            </a>
+            </a> 
+            {" "} and {" "}
+            <a
+              href="https://ui.aceternity.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="font-medium underline underline-offset-4"
+            >
+              Aceternity UI
+            </a> 
+
             . The source code is available on{" "}
             <a
-              href="https://github.com/shadcn"
+              href="https://github.com/mayur1377/kode-karo"
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"

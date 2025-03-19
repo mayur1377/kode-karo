@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "./theme-provider";
 import { Toaster } from "./components/ui/sonnner";
 
+
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import { dark } from "@clerk/themes";

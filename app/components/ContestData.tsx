@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button } from "../components/ui/button";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { SiLeetcode, SiCodeforces, SiCodechef } from "react-icons/si";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Skeleton } from "../components/ui/skeleton";
 import { Card, CardContent } from "@/app/components/ui/card";
 
 const platforms = [
