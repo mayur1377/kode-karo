@@ -134,42 +134,50 @@ const ShowHome = () => {
     };
   }, []);
 
+  const fixedIconPositions = [
+    { x: -10, y: 35 },
+    { x: 40, y: 30 },
+    { x: -20, y: 70 },
+    { x: 20, y: 75 },
+  ];
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background overflow-x-hidden">
       {/* Hero Section */}
       <section className="h-screen flex flex-col items-center justify-center relative">
-        <h1 className="text-6xl font-bold text-foreground mb-8">
-          &lt;kode-karo/&gt;
-        </h1>
-        <Button
-          onClick={handleSignInClick}
-          className="px-8 py-3 transition-colors text-lg
-           bg-black text-white hover:bg-gray-800 
-           dark:bg-white dark:text-black dark:hover:bg-gray-300"
-        >
-          Get Started
-        </Button>
+  <h1 className="text-6xl font-bold text-foreground mb-8">
+    &lt;kode-karo/&gt;
+  </h1>
+  <Button
+    onClick={handleSignInClick}
+    className="px-8 py-3 transition-colors text-lg
+      bg-black text-white hover:bg-gray-800 
+      dark:bg-white dark:text-black dark:hover:bg-gray-300"
+  >
+    Get Started
+  </Button>
 
-        {/* Platform Icons with Fixed Random Positions */}
-        {platformIcons.map((platform, index) => (
-          <motion.div
-            key={platform.alt}
-            className="hidden lg:block size-12 absolute transform drop-shadow-[0_16px_24px_rgba(0,0,0,0.35)]"
-            style={{
-              left: `${(viewportSize.width * iconPositions[index]?.x) / 100}px`,
-              top: `${(viewportSize.height * iconPositions[index]?.y) / 100}px`,
-              transform: `rotate(${platform.rotate}deg)`,
-              x: mousePosition.x * 0.02,
-              y: mousePosition.y * 0.02,
-            }}
-            variants={floatingVariant}
-            initial="initial"
-            animate="animate"
-          >
-            <Image src={platform.icon} alt="??" className="w-full h-full" />
-          </motion.div>
-        ))}
-      </section>
+  {/* Platform Icons with Fixed Random Positions */}
+  {platformIcons.map((platform, index) => (
+    <motion.div
+      key={platform.alt}
+      className="hidden lg:block w-12 h-12 absolute transform drop-shadow-[0_16px_24px_rgba(0,0,0,0.35)]"
+      style={{
+        left: `${(viewportSize.width * fixedIconPositions[index]?.x) / 100}px`,
+        top: `${(viewportSize.height * fixedIconPositions[index]?.y) / 100}px`,
+        transform: `rotate(${platform.rotate}deg)`,
+        x: mousePosition.x * 0.02,
+        y: mousePosition.y * 0.02,
+      }}
+      variants={floatingVariant}
+      initial="initial"
+      animate="animate"
+    >
+      <Image src={platform.icon} alt="platform" className="w-full h-full" />
+    </motion.div>
+  ))}
+</section>
+
 
       {/* Features Sections */}
       <section className="min-h-screen flex items-center justify-center w-full">
