@@ -124,6 +124,7 @@ const ShowHome = () => {
     }));
 
     setIconPositions(positions);
+    console.log(iconPositions);
 
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("resize", handleResize);
