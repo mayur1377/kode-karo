@@ -17,7 +17,7 @@ const CustomSignIn = () => {
     try {
       await signIn.authenticateWithRedirect({
         strategy: "oauth_google",
-        redirectUrl: "/sso-callback",
+        redirectUrl: window.location.origin,
         redirectUrlComplete: "/",
       });
     } catch (err) {
